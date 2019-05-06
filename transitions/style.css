@@ -1,0 +1,244 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+    height: 2000px;
+}
+.container {
+  width: 90%;
+  margin: 100px auto;
+}
+.parent {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.parent:hover a {
+    color: black;
+
+}
+a, p {
+    display: block;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(212, 207, 207);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+/* SWEEP RIGHT */
+.layer-to-r {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.parent:hover .layer-to-r {
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: rgba(245, 243, 243, 0.582);
+}
+/* END RIGHT */
+
+/* SWEEP LEFT */
+.layer-to-l {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.parent:hover .layer-to-l {
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: rgba(245, 243, 243, 0.582);
+}
+/* END LEFT */
+/* SWEEP TO BOTTOM */
+.layer-to-b {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.parent:hover .layer-to-b {
+    height: 100%;
+    transition: all 0.3s ease;
+    background-color: rgba(245, 243, 243, 0.582);
+}
+/* END BOTTOM */
+
+/* SWEEP TO TOP */
+.layer-to-t {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.parent:hover .layer-to-t {
+    height: 100%;
+    transition: all 0.3s ease;
+    background-color: rgba(245, 243, 243, 0.582);
+}
+
+/* END TOP */
+/* BOUNCE TO RIGHT */
+.layer-to-bounce-r {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+}
+.parent:hover .layer-to-bounce-r {
+    width: 100%;
+    transition: all 1s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    background-color: rgba(245, 243, 243, 0.582);
+}
+/* END BOUNCE RIGHT */
+
+/* bounce LEFT */
+.layer-to-bounce-l {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+}
+.parent:hover .layer-to-bounce-l {
+    width: 100%;
+    transition: all 1s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    background-color: rgba(245, 243, 243, 0.582);
+}
+/* BOUNCE LEFT END */
+
+/* BOUNCE TOP */
+.layer-to-bounce-t {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.parent:hover .layer-to-bounce-t {
+    height: 100%;
+    transition: all 1s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    background-color: rgba(245, 243, 243, 0.582);
+}
+/* BOUNCE TOP END */
+
+/* BOUNCE BOTTOM */
+.layer-to-bounce-b {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.parent:hover .layer-to-bounce-b {
+    height: 100%;
+    transition: all 1s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    background-color: rgba(245, 243, 243, 0.582);
+}
+/* BOUNCE BOTTOM END */
+
+/* SHUTTER IN VERTICAL */
+.layer-shut-in-ver {
+    position: absolute;
+    right:0%;
+    left:0%;
+    bottom: 0%;
+    top: 0%;
+    overflow: hidden;
+    border-radius: 10px;
+    transform: scaleY(1);
+}
+.parent:hover .layer-shut-in-ver{
+    width: 100%;
+    transform: scaleY(0);
+    transition: all 1s ease;
+    background-color: rgba(245, 243, 243, 0.582);
+}
+/* SHUTTER IN VERTICAL  END*/
+/* out vertical */
+.layer-shut-out-ver {
+    position: absolute;
+    right:0%;
+    left:0%;
+    bottom: 0%;
+    top: 0%;
+    overflow: hidden;
+    border-radius: 10px;
+    transform: scaleY(0);
+}
+.parent:hover .layer-shut-out-ver{
+    width: 100%;
+    transform: scaley(1);
+    transition: all 1s ease;
+    background-color: rgba(245, 243, 243, 0.582);
+}
+/* OUT VERTICAL END */
+
+/* RECTANGLE OUT */
+.layer-rec-out {
+    position: absolute;
+    right:0%;
+    left:0%;
+    bottom: 0%;
+    top: 0%;
+    overflow: hidden;
+    border-radius: 10px;
+    transform: scale(0);
+}
+.parent:hover .layer-rec-out{
+    width: 100%;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    background-color: rgba(245, 243, 243, 0.582);
+}
+
+
+/* RECTANGLE IN */
+.layer-rec-in {
+    position: absolute;
+    right:0%;
+    left:0%;
+    bottom: 0%;
+    top: 0%;
+    overflow: hidden;
+    border-radius: 10px;
+    transform: scale(1);
+}
+.parent:hover .layer-rec-in{
+    width: 100%;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    background-color: rgba(245, 243, 243, 0.582);
+}
